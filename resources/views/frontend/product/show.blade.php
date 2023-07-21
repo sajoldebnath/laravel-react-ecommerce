@@ -7,11 +7,11 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="breadcrumb__text">
-              <h2>Vegetable’s Package</h2>
+              <h2>NEWS</h2>
               <div class="breadcrumb__option">
                 <a href="./index.html">Home</a>
-                <a href="./index.html">Vegetables</a>
-                <span>Vegetable’s Package</span>
+                <a href="./index.html">NEWS</a>
+                <span>READING</span>
               </div>
             </div>
           </div>
@@ -21,10 +21,27 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Details Section Begin -->
-    <!-- <section class="product-details spad" id="product-detail"> -->
-      <section class="product-details spad" id="product">
+    <section class="product-details spad" id="product-detail">
+      <!-- <section class="product-details spad" id="product"> -->
      
-    </section>
+    <!-- </section>
+    <style>
+      .disable{
+        display: none;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {event.preventDefault() 
+        let quantity = document.querySelectorAll(".product__details__quantity")
+        const list = quantity[0].classList.add("disable")
+      // let value = document.querySelectorAll(".featured__item__text")[0];
+      // value.removeChild(value.lastElementChild)
+      console.log(list)
+      // value.lastElementChild
+      // console.log(quantity[0]) 
+      });
+      
+    </script> -->
     <!-- Product Details Section End -->
 
     <!-- Related Product Section Begin -->
@@ -45,13 +62,14 @@
                 class="product__item__pic set-bg"
                 data-setbg="{{ $related_product->gallery->first()->getUrl() }}"
               >
+              <img src="{{ $related_product->gallery->first()->getUrl() }}" alt="no image">
                 <ul class="product__item__pic__hover">
                   <li>
                     <a href="#"><i class="fa fa-heart"></i></a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
               <div class="product__item__text">

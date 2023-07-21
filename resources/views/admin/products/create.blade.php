@@ -32,18 +32,18 @@
                         <label for="name">Name</label>
                         <input type="text" name="name" value="{{ old('name') }}" class="form-control">
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="price">price</label>
+                    <div class="form-group">
+                        <label for="price">Subscribers</label>
                         <input type="number" name="price" value="{{ old('price') }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="quantity">quantity</label>
+                        <label for="quantity">Videos</label>
                         <input type="number" name="quantity" value="{{ old('quantity') }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="weight">weight</label>
+                        <label for="weight">number of people view</label>
                         <input type="number" name="weight" value="{{ old('weight') }}" class="form-control">
-                    </div> -->
+                    </div>
                     <div class="form-group">
                         <label for="description">description</label>
                         <textarea class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
@@ -55,7 +55,6 @@
                     <div class="form-group {{ $errors->has('gallery') ? 'has-error' : '' }}">
                         <label for="gallery">gallery</label>
                         <div class="needsclick dropzone" id="gallery-dropzone">
-
                         </div>
                         @if($errors->has('gallery'))
                             <em class="invalid-feedback">
